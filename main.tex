@@ -1,34 +1,39 @@
-
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
-%
+
 \usepackage{setspace}
-\usepackage{gensymb}
+\usepackage{gensymb} 
+
 \singlespacing
+
+
 \usepackage[cmex10]{amsmath}
-\usepackage{siunitx}
+
 \usepackage{amsthm}
 
-\usepackage{mathrsfs}
 
+\usepackage{mathrsfs}
 \usepackage{txfonts}
 \usepackage{stfloats}
-
-\usepackage{steinmetz}
+\usepackage{bm}
 \usepackage{cite}
 \usepackage{cases}
 \usepackage{subfig}
+
 \usepackage{longtable}
 \usepackage{multirow}
+
 \usepackage{enumitem}
 \usepackage{mathtools}
+\usepackage{steinmetz}
 \usepackage{tikz}
 \usepackage{circuitikz}
 \usepackage{verbatim}
 \usepackage{tfrupee}
 \usepackage[breaklinks=true]{hyperref}
-\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+
 \usetikzlibrary{calc,math}
-\usetikzlibrary{fadings}
 \usepackage{listings}
     \usepackage{color}                                            %%
     \usepackage{array}                                            %%
@@ -37,10 +42,10 @@
     \usepackage{multirow}                                         %%
     \usepackage{hhline}                                           %%
     \usepackage{ifthen}                                           %%
-  %optionally (for landscape tables embedded in another document): %%
     \usepackage{lscape}     
 \usepackage{multicol}
 \usepackage{chngcntr}
+
 \DeclareMathOperator*{\Res}{Res}
 
 \renewcommand\thesection{\arabic{section}}
@@ -50,6 +55,7 @@
 \renewcommand\thesectiondis{\arabic{section}}
 \renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
 \renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
 
 \hyphenation{op-tical net-works semi-conduc-tor}
 \def\inputGnumericTable{}                                 %%
@@ -61,7 +67,6 @@ breaklines=true,
 columns=fullflexible
 }
 \begin{document}
-%
 
 
 \newtheorem{theorem}{Theorem}[section]
@@ -71,6 +76,7 @@ columns=fullflexible
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{example}{Example}[section]
 \newtheorem{definition}[problem]{Definition}
+
 \newcommand{\BEQA}{\begin{eqnarray}}
 \newcommand{\EEQA}{\end{eqnarray}}
 \newcommand{\define}{\stackrel{\triangle}{=}}
@@ -91,7 +97,6 @@ columns=fullflexible
 \newtheorem{rem}{Remark}
 \newcommand{\sgn}{\mathop{\mathrm{sgn}}}
 \providecommand{\abs}[1]{\left\vert#1\right\vert}
-\providecommand{\abs}[1]{\lvert#1\rvert} 
 \providecommand{\res}[1]{\Res\displaylimits_{#1}} 
 \providecommand{\norm}[1]{\left\lVert#1\right\rVert}
 %\providecommand{\norm}[1]{\lVert#1\rVert}
@@ -119,7 +124,7 @@ columns=fullflexible
      \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
      \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
 \vspace{3cm}
-\title{Assignment 3}
+\title{Assignment-1}
 \author{G.Soujanya}
 \maketitle
 \newpage
@@ -128,83 +133,73 @@ columns=fullflexible
 \renewcommand{\thetable}{\theenumi}
 Download all python codes from 
 \begin{lstlisting}
-https://github.com/G.Soujanya/Assignment3/tree/main/CODES
+https://github.com/G.Soujanya/AssignmentT-1/tree/main/Assignment%201/CODES
 \end{lstlisting}
 %
 and latex-tikz codes from 
 %
 \begin{lstlisting}
-https://github.com/G.Soujanya/Assignment3/tree/main
+https://github.com/G.Soujanya/Assignment-1/tree/main/Assignment%201
 \end{lstlisting}
 %
+\section{QUESTION NO-2.13}
+\item Construct $\triangle ABC$  such that
+$AB$=2.5, $BC$=6, and $AC$=6.5.Find\angle{B}
 %
-\section{QUESTION No-2.45 (Linear forms)}
-show that the line joining the origin to the  point \myvec{2\\1\\1} is perpendicular to the line determined by the points \myvec{3\\5\\-1}, \myvec{4\\3\\-1}
 %
-\section{Solution}
-case(1):Now, we find the line equation passing through the origin to point \myvec{2\\1\\1}
+\section{SOLUTION}
+Let assume, 
+$AB$=c, $BC$=a, $AC$=b
+ 
+Let
+\begin{align}
+\textbf{A}=\myvec{6.5 \\ 2.5},
+\textbf{B}=\myvec{2.5\\ 6} ,
+\textbf{C}=\myvec{6 \\ 6.5}
+\end{align}
+Now,
+\begin{align}
+\norm{\vec{A}-\vec{B}}^2 = \norm{\vec{A}}^2  =c^2=(2.5)^2=6.25
 \\
-Let origin point be \vec{O}=\myvec{0\\0\\0} and other pont be \vec{P}=\myvec{2\\1\\1}
-\\ 
-The vector form of the line passing through \vec{O} and \vec{P}, which is the line passing through the point \vec{O} and along direction vector \vec{A} is given by 
-\begin{align}
-\vec{r}=\vec{O}+k\vec{A}
-\end{align}
-\begin{align}
-\implise \vec{r}=\myvec{0\\0\\0}+k\myvec{2\\1\\1}
-\end{align}
-\begin{align}
-\implise \vec{r}=r\myvec{2\\1\\1}
-\end{align}
-Here the direction vector is 
-\begin{align}
-\vec{d_1}=\myvec{2\\1\\1}
-\end{align}
-case(2) :Now let we find the line equation passing through the points
-\begin{align}
-\vec{a}=\myvec{3\\5\\-1} and \vec{b}=\myvec{4\\3\\-1}
-\end{align}
-Direction vector \vec{A} of the points \vec{a} and \vec{b} is given by 
-\begin{align}
-\vec{A}=\vec{b}-\vec{a}
-=\myvec{4\\3\\-1}-\myvec{3\\5\\-1}
-\end{align}
-Therefore \vec{A}=\myvec{1\\-2\\0}
+\norm{\vec{B}-\vec{C}}^2 = \norm{\vec{C}}^2 =a^2=(6) ^2=36
 \\
-the equation of the line is 
-\begin{align}
-\vec{x}=\vec{a}+\lambda\vec{A}
-\\
-\vec{x}=\myvec{3\\5\\-1}+\lambda\myvec{1\\-2\\0}
-\end{align}
-Here, the direction vector is 
-\begin{align}
-\vec{d_2}=\myvec{1\\-2\\0}
+\norm{\vec{A}-\vec{C}}^2=b^2=(6.5)^2=42.25
 \end{align}
 
-Two lines are perpendicular each other when the dot product of their direction vectors is 0
-\\
-Dot product ofdirection vectors  $\vec{d_1}$ and $\vec{d_2}$
+From $\triangle ABC$, we use the Law of cosine:
 \begin{align}
-\vec{d_1}^T\vec{d_2}=(2 \times 1) +(1 \times (-2)) +(1 \times 0) 
+b^2=a^2+ c^2 - 2ac cos B
 \\
-=2+(-2) +0
+(6.5)^2=6^2+(2.5 )^2-2*6*2.5 cos B
 \\
-=2-2
+(42.25)=36+6.25-32.5*cos B
 \\
-=0
+42.25-36-6.25=32.5*cos B
 \\
-\implise \boxed{\vec{d_1}^T\vec{d_2}=0}
+0=32.5*cos B
+\\
+cos B=o
+\\
+ B=90
 \end{align}
-as the dot product of direction vector of the lines is 0($\vec{d_1}^T\vec{d_2}$), we can say that the lines are perpendicular to each other
+
+As we consider$\triangle ABC$  in first quadrant we consider angle {B}
+\begin{align}
+\therefore angle {B}=90°
+\end{align}
+Now, Vertices of given $\triangle ABC$ can be written as,
+\begin{align}
+\vec{A} = \myvec{6.5\\2.5}, \vec{B} = \myvec{2.5\\6}, \vec{C} = \myvec{6\\6.5}
+\end{align}
+\\
+ Now, $\triangle ABC$ can be plotted using vertices $AB$ ,$BC$ and $AC$ .
+\\
+Plot of $\triangle ABC$:
 \numberwithin{figure}{section}
 \begin{figure}[ht]
-\centering
-\includegraphics[width=\columnwidth]{download.png}
-\caption{lines perpendicular to each other}
-\label{Plot of the line}
+    \centering
+    \includegraphics[width=\columnwidth]{download.png}
+    \caption{ $\triangle ABC$}
+    \label{fig: $\triangle ABC$}
 \end{figure}
 \end{document}
-
-
-
